@@ -27,12 +27,12 @@ function checkForMatch(){
       }
 }}
 function flipCard(){
-    let cardId = this.getAttribute(data-id);
+    let cardId = this.getAttribute('data-id');
     this.setAttribute("src", cards[cardId].cardImage);
     cardsInPlay.push(cards[cardId].cardImage);
-    console.log(cards[cardId].cardImage);
+    //console.log(cards[cardId].cardImage);
     cardsInPlay.push(cards[cardId].suit);
-    console.log(cards[cardId].suit)
+    //console.log(cards[cardId].suit)
     checkForMatch();
 }
 function createBoard(){
@@ -40,7 +40,7 @@ for (let i = 0; i < cards.length; i++) {
 
   let cardElement = document.createElement('img');
       cardElement.setAttribute("src", "images/back.png");
-      cardElement.setAttribute(data-id, [i]);
+      cardElement.setAttribute('data-id', [i]);
       cardElement.addEventListener("click", flipCard);
       document.getElementById('game-board').appendChild(cardElement);
 }
