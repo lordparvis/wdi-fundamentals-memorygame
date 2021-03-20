@@ -1,2 +1,2 @@
-# wdi-fundamentals-memorygame
-Memory Game
+
+# Diamond Memory Game
